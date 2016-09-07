@@ -1,0 +1,71 @@
+<!-- Top level template for the chat page -->
+<template name="chat_page">
+	<h2 class="header">Type in the box below to send a message to <b>{{other_user}}</b><img src="/{{avatar}}" class="avatar_img">!</h2>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="well well-lg">
+			{{#each messages}}
+			{{> chat_message}}
+			{{/each}}
+			</div>	
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-md-12">
+			<form class="js-send-chat">
+			<input class="input form-control" type="text" name="chat" placeholder="type a message here...">
+			<p>
+			<br/>
+				<a href ="#" class="js-add-emoji" title=":D">{{{parseEmoticons ":D"}}}</a>
+				<a href ="#" class="js-add-emoji" title="o_o">{{{parseEmoticons "o_o"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":)">{{{parseEmoticons ":)"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":(">{{{parseEmoticons ":("}}}</a>
+				<a href ="#" class="js-add-emoji" title="-_-">{{{parseEmoticons "-_-"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":P">{{{parseEmoticons ":P"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":O">{{{parseEmoticons ":O"}}}</a>
+				<a href ="#" class="js-add-emoji" title="8)">{{{parseEmoticons "8)"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":smirk:">{{{parseEmoticons ":smirk:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":[">{{{parseEmoticons ":["}}}</a>
+				<a href ="#" class="js-add-emoji" title=":ninja:">{{{parseEmoticons ":ninja:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":nerd:">{{{parseEmoticons ":nerd:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":S">{{{parseEmoticons ":S"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":bashful:">{{{parseEmoticons ":bashful:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":crying:">{{{parseEmoticons ":crying:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":puke:">{{{parseEmoticons ":puke:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":love:">{{{parseEmoticons ":love:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":devil:">{{{parseEmoticons ":devil:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":angel:">{{{parseEmoticons ":angel:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=">:D">{{{parseEmoticons ">:D"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":wtf:">{{{parseEmoticons ":wtf:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":sweating:">{{{parseEmoticons ":sweating:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":embarrassed:">{{{parseEmoticons ":embarrassed:"}}}</a>
+				<a href ="#" class="js-add-emoji" title="x-D">{{{parseEmoticons "x-D"}}}</a>
+				<a href ="#" class="js-add-emoji" title="O.o">{{{parseEmoticons "O.o"}}}</a>
+				<a href ="#" class="js-add-emoji" title=";)">{{{parseEmoticons ";)"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":\">{{{parseEmoticons ":\\"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":beer:">{{{parseEmoticons ":beer:"}}}</a>
+				<a href ="#" class="js-add-emoji" title=":poop:">{{{parseEmoticons ":poop:"}}}</a>
+			</p>
+			<button class="btn btn-info btn-lg">Send</button>
+		</form>
+		</div>
+	</div>
+</template>
+
+<!-- simple template that displays a message -->
+<template name="chat_message">
+	<div class="row">
+		<div class="col-md-1">
+			<img src="/{{avatar}}" class="avatar_img"> <!-- display avatar -->
+		</div>
+		<div class="col-md-11 text">
+			<b>{{username}}</b> <!-- display username -->
+			<br/>
+			{{{parseEmoticons text}}}
+		</div>
+	</div>
+	<br/>
+</template>
+
+
+

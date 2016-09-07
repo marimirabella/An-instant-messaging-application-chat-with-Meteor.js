@@ -1,0 +1,32 @@
+/* CSS declarations go here */
+
+.user_avatar{
+	min-height:100px;
+	text-align: center;
+
+}
+.avatar_img{
+	height:75px;
+	max-width: 80px;
+}
+
+.text{
+	font-size: 16px;
+}
+
+.header{
+	color: #191970;
+}
+
+.test{
+	font-size: 19px;
+	margin-bottom: 30px;
+}
+
+.navbar-default, .well{
+	background: #60eae1; /* Old browsers */
+	background: -moz-linear-gradient(top, #60eae1 3%, #5bc0de 70%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #60eae1 3%,#5bc0de 70%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #60eae1 3%,#5bc0de 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60eae1', endColorstr='#5bc0de',GradientType=0 ); /* IE6-9 */
+}
