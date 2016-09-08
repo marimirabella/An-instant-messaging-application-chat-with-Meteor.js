@@ -1,1 +1,0 @@
-{"version":3,"sources":["meteor://💻app/lib/collections.js"],"names":[],"mappings":";;;;;;;;;AACA,KAAK,GAAG,IAAI,KAAK,CAAC,UAAU,CAAC,OAAO,CAAC,CAAC,qC","file":"/lib/collections.js","sourcesContent":["//collections\r\nChats = new Mongo.Collection(\"chats\");\r\n"]}
