@@ -1,0 +1,20 @@
+meteor:
+  image: foneox/instantchat
+  ports:
+    - "8080:80"
+  environment:
+    - ROOT_URL=https://instant.mari-mirabella.info
+    - MONGO_URL=mongodb://my_little_mongo:27017/meteor
+  links:
+    - mongo_db:my_little_mongo
+mongodata:
+  image: mongo:3.4.1
+  volumes:
+    - /data/db
+  command: --break-mongo
+
+mongo_db:
+  image: mongo:3.4.1
+  volumes_from:
+    - mongodata
+  command: --smallfiles --rest --httpinterface
